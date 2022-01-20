@@ -12,3 +12,21 @@ git clone https://github.com/century300/useful-scripts ~/Downloads/useful-script
 ```bash
 ./read_etc-passwd_file.sh
 ```
+<br/>
+
+#### Bash for loop
+- for loop syntax
+```bash
+for OUTPUT in $(Linux-Or-Unix-Command-Here)
+do
+	command1 on $OUTPUT
+	command2 on $OUTPUT
+	commandN
+done
+```
+- Example: gobuster brute-force using SecLists subdomains wordlist to discover virtual hosts names, then use dirbuster wordlist to find the _flag_ in there
+```bash
+gobuster vhost -u http://TargetWebsite.com -w /usr/share/wordlists/SecLists/Discovery/DNS/subdomains-top1million-5000.txt -t50
+
+for vhost in subDomain1 subDomain2 subDomain3; do gobuster dir -u http://${vhost}.TargetWebsite.com -w /usr/share/dirbuster/directory-list-2.3-small.txt -x php,txt -t500 ; done
+```
