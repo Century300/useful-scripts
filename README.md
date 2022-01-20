@@ -12,6 +12,13 @@ git clone https://github.com/century300/useful-scripts ~/Downloads/useful-script
 ```bash
 ./read_etc-passwd_file.sh
 ```
+- Or you can run the code in terminal
+```bash
+while IFS=: read -r f1 f2 f3 f4 f5 f6 f7
+do
+ echo "User $f1 use $f7 shell and stores files in $f6 directory."
+done < /etc/passwd
+```
 <br/>
 
 #### Bash for loop
