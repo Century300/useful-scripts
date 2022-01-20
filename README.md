@@ -1,4 +1,4 @@
-# Some useful bash scripts
+# Some useful shell scripts
 I upload some useful bash scipts here now and then.
 
 ## Instructions
