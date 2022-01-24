@@ -37,7 +37,7 @@ gobuster vhost -u http://TargetWebsite.com -w /usr/share/wordlists/SecLists/Disc
 
 for vhost in subDomain1 subDomain2 subDomain3; do gobuster dir -u http://${vhost}.TargetWebsite.com -w /usr/share/dirbuster/directory-list-2.3-small.txt -x php,txt -t30 -o Output.txt; done
 ```
-- Usage 2: **ssh_spam.sh**: check to see which one is the useful ssh port in CTF
+- Usage 2: **ssh_spam.sh**: check to see which one is the useful/real ssh service in CTF
 ```bash
 # You can run the ssh_spam.sh directly
 ./ssh_spam.sh
