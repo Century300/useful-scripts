@@ -1,5 +1,5 @@
 # Some useful shell scripts
-I upload some useful bash scipts here now and then.
+I upload some useful shell scipts here now and then.
 
 ### **Clone the repository**
 ```bash
