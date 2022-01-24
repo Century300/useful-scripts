@@ -37,3 +37,18 @@ gobuster vhost -u http://TargetWebsite.com -w /usr/share/wordlists/SecLists/Disc
 
 for vhost in subDomain1 subDomain2 subDomain3; do gobuster dir -u http://${vhost}.TargetWebsite.com -w /usr/share/dirbuster/directory-list-2.3-small.txt -x php,txt -t30 -o Output.txt; done
 ```
+<br/>
+
+### **Privilege escalation by using SUID**
+```bash
+# Finding SUID executables
+find / -perm -4000 -type f -exec ls -la {} 2>/dev/null \;
+find / -uid 0 -perm -4000 -type f 2>/dev/null
+
+#Find SUID
+find / -perm -u=s -type f 2>/dev/null
+
+find / -user root -perm -4000 -print 2>/dev/null
+find / -user root -perm -4000 -exec ls -ldb {} \;
+```
+<br/>
