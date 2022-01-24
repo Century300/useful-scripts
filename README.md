@@ -67,3 +67,4 @@ export TERM=xterm-256color
 
 #Switch to the background with CTRL+Z
 ```
+<br/>
