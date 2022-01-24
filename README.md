@@ -39,6 +39,10 @@ for vhost in subDomain1 subDomain2 subDomain3; do gobuster dir -u http://${vhost
 ```
 - Usage 2: **ssh_spam.sh**: check to see which one is the useful ssh port in CTF
 ```bash
+# You can run the ssh_spam.sh directly
+./ssh_spam.sh
+
+# Or you can copy the script to your terminal to run directly
 for port in {1..65535}
 do
 	printf "$port"
