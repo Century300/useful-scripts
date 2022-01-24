@@ -42,7 +42,7 @@ for vhost in subDomain1 subDomain2 subDomain3; do gobuster dir -u http://${vhost
 ### **Privilege escalation by using SUID**
 - **-u=s** denotes files owned by the root user, **2>/dev/null** means to redirect all errors to /dev/null (aka ignoring all errors)
 ```bash
-# Finding SUID executables
+# Find SUID executables
 find / -perm -4000 -type f -exec ls -la {} 2>/dev/null \;
 find / -uid 0 -perm -4000 -type f 2>/dev/null
 
