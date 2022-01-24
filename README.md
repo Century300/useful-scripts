@@ -31,7 +31,7 @@ do
 	commandN
 done
 ```
-- Example: gobuster brute-force using SecLists subdomains wordlist to discover virtual hosts names, then use **_for_** loop to and dirbuster wordlist to find the _flag_ in there
+- Example: gobuster brute-force using SecLists subdomains wordlist to discover virtual hosts names, then use **_for loop_** and dirbuster wordlist to find the _flag_ in there
 ```bash
 gobuster vhost -u http://TargetWebsite.com -w /usr/share/wordlists/SecLists/Discovery/DNS/subdomains-top1million-5000.txt -t30
 
