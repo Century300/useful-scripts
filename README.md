@@ -31,11 +31,19 @@ do
 	commandN
 done
 ```
-- Example: gobuster brute-force using SecLists subdomains wordlist to discover virtual hosts names, then use **_for loop_** and dirbuster wordlist to find the _flag_ in there
+- Usage 1: gobuster brute-force using SecLists subdomains wordlist to discover virtual hosts names, then use **_for loop_** and dirbuster wordlist to find the _flag_ in there
 ```bash
 gobuster vhost -u http://TargetWebsite.com -w /usr/share/wordlists/SecLists/Discovery/DNS/subdomains-top1million-5000.txt -t30
 
 for vhost in subDomain1 subDomain2 subDomain3; do gobuster dir -u http://${vhost}.TargetWebsite.com -w /usr/share/dirbuster/directory-list-2.3-small.txt -x php,txt -t30 -o Output.txt; done
+```
+- Usage 2: **ssh_spam.sh**: check to see which one is the useful ssh port in CTF
+```bash
+for port in {1..65535}
+do
+	printf "$port"
+	ssh -o StrictHostKeyChecking=no -p $port <target_IP>
+done
 ```
 <br/>
 
