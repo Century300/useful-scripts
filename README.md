@@ -45,7 +45,7 @@ for vhost in subDomain1 subDomain2 subDomain3; do gobuster dir -u http://${vhost
 find / -perm -4000 -type f -exec ls -la {} 2>/dev/null \;
 find / -uid 0 -perm -4000 -type f 2>/dev/null
 
-#Find SUID
+# Find SUID
 find / -perm -u=s -type f 2>/dev/null
 
 find / -user root -perm -4000 -print 2>/dev/null
