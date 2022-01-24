@@ -3,7 +3,7 @@ I upload some useful shell scipts here now and then.
 
 ### **Clone the repository**
 ```bash
-git clone https://github.com/century300/useful-scripts ~/Downloads/useful-scripts && cd ~/Downloads/useful-scripts && chmod +x *
+git clone https://github.com/century300/useful-shell-scripts ~/Downloads/useful-shell-scripts && cd ~/Downloads/useful-shell-scripts && chmod +x *
 ```
 <br/>
 
