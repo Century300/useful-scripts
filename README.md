@@ -66,7 +66,7 @@ find / -user root -perm -4000 -exec ls -ldb {} \;
 ```
 <br/>
 
-### **Reverse Shell Tricks**
+### [**Reverse Shell Tricks**](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md)
 ```bash
 # Get a tty shell
 python -c 'import pty; pty.spawn("/bin/sh")'
